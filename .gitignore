@@ -1,0 +1,15 @@
+node_modules
+dist/
+
+.env
+.env.*
+.env-*
+
+*-lock.json
+*-lock.yaml
+*.lock
+
+logs
+*.log
+*-debug.log*
+*-error.log*
