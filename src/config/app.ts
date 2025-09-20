@@ -6,7 +6,9 @@ import AppError from "../utils/AppError";
 const app = express();
 
 app.use(cors());
-app.use("/", routes);
+app.use(express.json({ limit: "10mb" }));
+app.use(express.urlencoded({ extended: true }));
+app.use("/api/v1", routes);
 
 // Global 404 handler - this should be the last middleware before error handlers
 app.use((req: Request, res: Response, next: NextFunction) => {
